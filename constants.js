@@ -48,8 +48,8 @@ const TUNINGS = [
 	{tuning: 'C# standard', notes: ['C#4','G#3','E3', 'B2', 'F#2','C#2','G#1','D#1']},
 	{tuning: 'C standard',  notes: ['C4', 'G3', 'D#3','A#2','F2', 'C2', 'G1', 'D1' ]},
 	{tuning: 'All 4ths',  notes: ['F4', 'C3', 'G3', 'D3', 'A2', 'E2', 'B1', 'F#1' ]},
-	{tuning: 'All 5ths',  notes: ['A4', 'D4', 'G3', 'C3', 'F2', 'A#1', 'A0', 'A0' ]},
-	{tuning: 'Fripp NST',  notes: ['G4', 'E4', 'A3', 'D3', 'G2', 'C2', 'A0', 'A0' ]}
+	{tuning: 'All 5ths',  notes: ['A4', 'D4', 'G3', 'C3', 'F2', 'A#1', 'D#1', 'A0' ]},
+	{tuning: 'Fripp NST',  notes: ['G4', 'E4', 'A3', 'D3', 'G2', 'C2', 'F1', 'A0' ]}
 ];
 
 const NOTES = [
