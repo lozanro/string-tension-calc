@@ -92,7 +92,8 @@ const NOTES = [
 	{note: 'F1',  freq:  43.6535},
 	{note: 'E1',  freq:  41.2034},
 	{note: 'D#1', freq:  38.8909},
-	{note: 'D1',  freq:  36.7081}
+	{note: 'D1',  freq:  36.7081},
+	{note: 'A0',  freq:   0.0001},
 ];
 
 const GAUGES = [
