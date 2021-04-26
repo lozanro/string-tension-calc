@@ -41,7 +41,7 @@ function updatePlot() {
 
 	if (tensionSeries.length) {
 		let xTicks = [];
-		['E','B','G','D','A','E','(B)','(F#)'].forEach((ciph, i) => {
+		['1st','2nd','3rd','4th','5th','6th','7th','8th'].forEach((ciph, i) => {
 			xTicks.push([i, ciph]);
 		});
 
