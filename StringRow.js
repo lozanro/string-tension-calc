@@ -11,7 +11,7 @@ class StringRow {
 		this.$tpl.data('obj', this);
 
 		this.stringNo = stringNo;
-		this.$tpl.find('.stringOrd').text(['E','B','G','D','A','E','B','F#'][this.stringNo - 1]);
+		this.$tpl.find('.stringOrd').text(['1st','2nd','3rd','4th','5th','6th','7th','8th'][this.stringNo - 1]);
 
 		this.scaleLen = 0;
 		this.packDefinedGauge = null;
