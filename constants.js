@@ -42,6 +42,7 @@ const SCALES = [
 
 const TUNINGS = [
 	{tuning: 'E standard',  notes: ['E4', 'B3', 'G3', 'D3', 'A2', 'E2', 'B1', 'F#1'], defaultSel: true},
+	{tuning: 'E 8 drop E',  notes: ['E4', 'B3', 'G3', 'D3', 'A2', 'E2', 'B1', 'E1']},
 	{tuning: 'Eb standard', notes: ['D#4','A#3','F#3','C#3','G#2','D#2','A#1','F1' ]},
 	{tuning: 'D standard',  notes: ['D4', 'A3', 'F3', 'C3', 'G2', 'D2', 'A1', 'E1' ]},
 	{tuning: 'C# standard', notes: ['C#4','G#3','E3', 'B2', 'F#2','C#2','G#1','D#1']},
