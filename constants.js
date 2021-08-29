@@ -186,7 +186,7 @@ const PACKS = [
 	{gauges: ['.008 P', '.011 P', '.014 P', '.022 W', '.032 W', '.046 W'], name: '.008/46 Fender Yngwie Malmsteen'},
 	{gauges: ['.008 P', '.011 P', '.014 P', '.030 W', '.040 W', '.050 W'], name: ".008/50 Pyramid Dushan Petrossi"},
 	{gauges: ['.008 P', '.012 P', '.015 P', '.026 W', '.042 W', '.052 W'], name: '.008/52 NST Curt Golden'},
-	{gauges: ['.008 P', '.013 P', '.024 W', '.032 W', '.054 W', '.064 W'], name: '.008/64 All 5th Violin', defaultSel: true},
+	{gauges: ['.008 P', '.013 P', '.024 W', '.036 W', '.054 W', '.064 W'], name: '.008/64 All 5th Violin', defaultSel: true},
 	{gauges: ['.0085 P','.0105 P','.015 P', '.022 W', '.032 W', '.039 W'], name: ".0085/39 D'Addario EXL130+"},
 	{gauges: ['.0085 P','.010 P', '.015 P', '.024 W', '.038 W', '.056 W'], name: ".0085/56 NST Fabio Mittino"},
 	{gauges: ['.009 P', '.011 P', '.016 P', '.024 W', '.032 W', '.042 W'], name: ".009/42 D'Addario / Ernie Ball"},
