@@ -13,6 +13,7 @@ class StringRow {
 		this.stringNo = stringNo;
 		this.$tpl.find('.stringOrd').text(['1st','2nd','3rd','4th','5th','6th','7th','8th'][this.stringNo - 1]);
 
+
 		this.scaleLen = 0;
 		this.packDefinedGauge = null;
 		this.packDefinedNote = null;
@@ -33,6 +34,29 @@ class StringRow {
 			$cmb.toggleClass('modified',
 				$cmb.find(':selected').data('obj').note !== this.packDefinedNote);
 			this.calcTension();
+		});
+
+		this.$tpl.find('.stringPlay').on('click', ev => {
+			let freq = this.$tpl.find('.note :selected').data('obj').freq;
+
+			if(this.$tpl.osci != null) this.$tpl.osci.stop();
+
+			var context = new AudioContext()
+			var o = context.createOscillator()
+			var g = context.createGain()
+			o.connect(g)
+			o.type = "triangle"
+			o.frequency.value = freq;
+			g.connect(context.destination)
+			o.start(0)
+			this.$tpl.osci = o;
+
+
+			setTimeout(function(){ o.stop(0) }, 10000)
+		});
+
+		this.$tpl.find('.stringStop').on('click', ev => {
+			this.$tpl.osci.stop();
 		});
 	}
 
@@ -120,7 +144,12 @@ class StringRow {
 		let $cmbNote = this.$tpl.find('.note');
 
 		let addEntries = (idxFrom, idxTo) => {
-			let suffixes = ['+1','std','-1','-2','-3','-4','-5','-6','-7']
+			// let suffixes = ['+1','std','-1','-2','-3','-4','-5','-6','-7','-8','-9','-10','-11','-12']
+			let suffixes = ['std']
+			for (let i = 1; i <= 20; i++){
+				if(i <= 11) suffixes.unshift("+"+i);
+				suffixes.push("-"+i);
+			}
 			for (let i = idxFrom; i <= idxTo; ++i) {
 				let $newOpt = $(`<option>${NOTES[i].note} (${suffixes[i - idxFrom]})</option>`);
 				$newOpt.data('obj', NOTES[i]);
@@ -129,13 +158,13 @@ class StringRow {
 		};
 
 		switch (this.stringNo) {
-			case 1: addEntries( 0,  8); break;
-			case 2: addEntries( 5, 13); break;
-			case 3: addEntries( 9, 17); break;
-			case 4: addEntries(14, 22); break;
-			case 5: addEntries(19, 27); break;
-			case 6: addEntries(24, 32); break;
-			case 7: addEntries(29, 37); break;
+			case 1: addEntries( 0, 10); break;
+			case 2: addEntries( 5, 16); break;
+			case 3: addEntries( 9, 23); break;
+			case 4: addEntries(14, 27); break;
+			case 5: addEntries(19, 38); break;
+			case 6: addEntries(24, 42); break;
+			case 7: addEntries(29, 46); break;
 			case 8: addEntries(34, NOTES.length - 1);
 		}
 		return $cmbNote;

@@ -41,7 +41,7 @@ function updatePlot() {
 
 	if (tensionSeries.length) {
 		let xTicks = [];
-		['1st','2nd','3rd','4th','5th','6th','7th','8th'].forEach((ciph, i) => {
+		['E','B','G','D','A','E','(B)','(F#)'].forEach((ciph, i) => {
 			xTicks.push([i, ciph]);
 		});
 
@@ -55,7 +55,7 @@ function updatePlot() {
 			points: {show: true, lineWidth: 3},
 			xaxis: {ticks: xTicks}
 		});
-	} else {
+} else {
 		$('#plotArea').fadeOut(200);
 	}
 }
